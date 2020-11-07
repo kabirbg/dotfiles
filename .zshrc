@@ -1,3 +1,5 @@
+XDG_RUNTIME_DIR=/run/user/1000
+
 # Add ~/bin to $PATH
 export PATH="$PATH:$HOME/bin"
 
