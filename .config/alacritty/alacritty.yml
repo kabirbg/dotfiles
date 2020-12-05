@@ -8,7 +8,7 @@ window:
   title: Alacritty
   dynamic_title: true
   use_thin_strokes: true
-draw_bold_text_with_bright_colors: false
+draw_bold_text_with_bright_colors: true
 background_opacity: 0.9
 cursor:
   style: Beam
