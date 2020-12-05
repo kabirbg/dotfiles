@@ -1,1 +1,0 @@
-/Users/Kabir/dotfiles/bashrc
