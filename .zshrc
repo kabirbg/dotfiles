@@ -4,6 +4,10 @@ export PATH="$PATH:$HOME/bin"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Set neovim as default text editor
+export VISUAL="/usr/local/bin/nvim"
+export EDITOR="/usr/local/bin/nvim"
+
 # Ignore perm issues and load oh-my-zsh normally
 ZSH_DISABLE_COMPFIX=true
 
