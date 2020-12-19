@@ -1,4 +1,4 @@
-export XDG_RUNTIME_DIR=/run/user/1000
+export XDG_RUNTIME_DIR=/tmp/
 
 # Add ~/bin to $PATH
 export PATH="$PATH:$HOME/bin"
