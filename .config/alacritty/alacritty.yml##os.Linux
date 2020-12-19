@@ -4,7 +4,6 @@ window:
   padding:
     x: 10
     y: 10
-  decorations: buttonless
   title: Alacritty
   dynamic_title: true
   use_thin_strokes: true
