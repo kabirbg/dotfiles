@@ -2,10 +2,14 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+exec xrandr --output eDP --scale 0.5
+exec feh --bg-scale /home/kabir/void.png
+
+bspc monitor -d I II III IV V VI VII VIII IX
 
 bspc config border_width         2
 bspc config window_gap          12
+bspc config focus_follows_pointer true
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
