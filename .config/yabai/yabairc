@@ -21,6 +21,7 @@ yabai -m config mouse_modifier               fn
 yabai -m config mouse_action1                move
 yabai -m config mouse_action2                resize
 yabai -m config mouse_drop_action            swap
+yabai -m config external_bar                 all:26:0   # make room for spacebar
 
 # general space settings
 yabai -m config layout                       bsp
