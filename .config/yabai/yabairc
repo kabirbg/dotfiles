@@ -21,7 +21,15 @@ yabai -m config mouse_modifier               fn
 yabai -m config mouse_action1                move
 yabai -m config mouse_action2                resize
 yabai -m config mouse_drop_action            swap
-yabai -m config external_bar                 all:26:0   # make room for spacebar
+
+# make room for spacebar
+SPACEBAR_HEIGHT=$(spacebar -m config height)
+SPACEBAR_POSITION=$(spacebar -m config position)
+if [SPACEBAR_POSITION=='top']
+yabai -m config external_bar                 all:$SPACEBAR_HEIGHT:0
+elif [SPACEBAR_POSITION='bottom']
+yabai -m config external_bar                 all:0:$SPACEBAR_HEIGHT
+fi
 
 # general space settings
 yabai -m config layout                       bsp
