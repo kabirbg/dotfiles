@@ -7,7 +7,6 @@ yabai -m config window_placement             first_child
 yabai -m config window_topmost               off
 yabai -m config window_shadow                on
 yabai -m config window_opacity               on
-yabai -m config window_opacity_duration      0.0
 yabai -m config active_window_opacity        0.95
 yabai -m config normal_window_opacity        0.9
 yabai -m config window_border                off
@@ -25,10 +24,12 @@ yabai -m config mouse_drop_action            swap
 # make room for spacebar
 SPACEBAR_HEIGHT=$(spacebar -m config height)
 SPACEBAR_POSITION=$(spacebar -m config position)
-if [SPACEBAR_POSITION=='top']
-yabai -m config external_bar                 all:$SPACEBAR_HEIGHT:0
-elif [SPACEBAR_POSITION='bottom']
-yabai -m config external_bar                 all:0:$SPACEBAR_HEIGHT
+if [ $SPACEBAR_POSITION == 'top' ]
+then
+        yabai -m config external_bar                 all:$SPACEBAR_HEIGHT:0
+elif [ $SPACEBAR_POSITION == 'bottom' ]
+then
+        yabai -m config external_bar                 all:0:$SPACEBAR_HEIGHT
 fi
 
 # general space settings
