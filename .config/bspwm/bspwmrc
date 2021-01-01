@@ -2,8 +2,9 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-exec xrandr --output eDP --scale 0.5
-exec feh --bg-scale /home/kabir/void.png
+xrandr --output eDP --scale 0.5
+feh --bg-scale /home/kabir/void.png
+polybar status
 
 bspc monitor -d I II III IV V VI VII VIII IX
 
