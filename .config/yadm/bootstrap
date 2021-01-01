@@ -1,4 +1,11 @@
-#!/bin/bash
+/#!/bin/bash
+
+# install void-packages
+if [ $(lsb_release -i) == 'VoidLinux' ]; then
+        git clone https://github.com/void-linux/void-packages/ && cd void-packages
+        ./xbps-src binary-bootstrap
+        cd
+fi
 
 # install vim-plug
 if command -v nvim >/dev/null 2>&1; then
