@@ -2,10 +2,12 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-xrandr --output eDP --scale 0.5
+if [[ $(xrandr | grep eDP) ]]; then 
+        xrandr --output eDP --scale 0.5
+fi
+
 feh --bg-scale /home/kabir/void.png
 polybar status
-
 bspc monitor -d I II III IV V VI VII VIII IX
 
 bspc config border_width         2
