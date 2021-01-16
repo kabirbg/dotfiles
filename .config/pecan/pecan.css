@@ -34,10 +34,10 @@
 
   /* padding 
    ---------------------------------------- */
-	/*--padding-left: calc(*/
-	/*var(--landscape-width) - 58px*/
-	/*);*/
 	--padding-left: 0px;
+	/*--padding-left: calc(*/
+	/*var(--landscape-width)*/
+	/*);*/
   --padding-right: 0px;
   --padding-top: 0px;
 
@@ -96,7 +96,7 @@
 
   /* typography 
    ---------------------------------------- */
-  --font-xanthia: OperatorMonoNerdFontComplete-Book, Menlo, Monospace;
+  --font-xanthia: OperatorMonoNerdFontComplete-Italic;
   --font-size-xanthia: var(--font-size);
 
   /* border 
@@ -113,8 +113,8 @@
    -------------------------------------------------------------- */
 
 	/*--background-landscape: ;*/
-	/*--border-landscape: ;*/
+	--border-landscape: 0px;
 	/*--margin-landscape: ;*/
 	/*--border-radius-landscape: ;*/
-	/*--shadow-landscape: ;*/
+	--shadow-landscape: NONE;
 }
