@@ -11,7 +11,7 @@ ctrl + shift - return : nvim
 alt - return : open -a 'Firefox Developer Edition'
 
 # make skhd reload its configuration files:
-ctrl - escape | skhd --reload
+ctrl - escape : skhd --reload
 
 ###########
 # WINDOWS #
