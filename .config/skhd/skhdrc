@@ -22,7 +22,7 @@ ctrl - h : yabai -m window --swap west
 ctrl - j : yabai -m window --swap south
 ctrl - k : yabai -m window --swap north
 ctrl - l : yabai -m window --swap east
-ctrl - g : yabai -m window --swap 
+ctrl - g : yabai -m window --swap largest
 
 # increase window size
 shift + ctrl - h : yabai -m window --resize left:-20:0
