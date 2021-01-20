@@ -17,11 +17,11 @@ ctrl - escape : skhd --reload
 # WINDOWS #
 ###########
 
-# swap window
-ctrl - h : yabai -m window --swap west
-ctrl - j : yabai -m window --swap south
-ctrl - k : yabai -m window --swap north
-ctrl - l : yabai -m window --swap east
+# swap/warp windows
+ctrl - h : yabai -m window --warp west
+ctrl - j : yabai -m window --warp south
+ctrl - k : yabai -m window --warp north
+ctrl - l : yabai -m window --warp east
 ctrl - g : yabai -m window --swap largest
 
 # increase window size
