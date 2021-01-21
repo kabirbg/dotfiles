@@ -1,9 +1,0 @@
-[submodule ".config/uebersicht/widgets/simple-bar"]
-	path = .config/uebersicht/widgets/simple-bar
-	url = https://github.com/Jean-Tinland/simple-bar
-[submodule ".config/uebersicht/widgets/landscape"]
-	path = .config/uebersicht/widgets/landscape
-	url = https://github.com/zzzeyez/landscape.git
-[submodule ".config/uebersicht/widgets/pecan"]
-	path = .config/uebersicht/widgets/pecan
-	url = https://github.com/kabirbg/pecan.git

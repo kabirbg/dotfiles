@@ -10,6 +10,10 @@ ctrl - return : kitty
 ctrl + shift - return : nvim
 alt - return : open -a 'Firefox Developer Edition'
 
+# screencapture
+ctrl - s : screencapture -ix "~/.screenshots/Screen\ Capture-$(date).png"
+shift + ctrl - s : screencapture -cix
+
 # make skhd reload its configuration files:
 ctrl - escape : skhd --reload
 
