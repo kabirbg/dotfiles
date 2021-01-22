@@ -5,10 +5,11 @@
 # RULES #
 #########
 
-# open kitty, neovim, and firefox with shortcuts
+# shortcuts to open apps
 ctrl - return : kitty
 ctrl + shift - return : nvim
 alt - return : open -a 'Firefox Developer Edition'
+ctrl - n : open -a Notion
 
 # screencapture
 ctrl - s : screencapture -ixu
