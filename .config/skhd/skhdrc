@@ -18,6 +18,9 @@ shift + ctrl - s : screencapture -cix
 # make skhd reload its configuration files:
 ctrl - escape : skhd --reload
 
+# restart yabai:
+ctrl + alt - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+
 ###########
 # WINDOWS #
 ###########
