@@ -21,6 +21,7 @@ allow_remote_control yes
 macos_traditional_fullscreen yes
 macos_show_window_title_in menubar
 macos_custom_beam_cursor yes
+startup_session session
 kitty_mod cmd
 map kitty_mod+enter new_window
 map kitty_mod+y launch nvim
