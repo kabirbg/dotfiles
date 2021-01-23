@@ -1,96 +1,32 @@
 # Configuration for the Kitty Terminal Emulator (https://sw.kovidgoyal.net/kitty/)
-
-Fonts {{{
 font_family      Fira Code Retina
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
 font_size 12.0
 font_features FiraCode-Retina +zero +onum
-}}}
-
-Cursor customization {{{
-cursor #cccccc
 cursor_shape beam
 cursor_beam_thickness 1.5
-}}}
-
-Scrollback {{{
 scrollback_lines 2000
-touch_scroll_multiplier 1.0
-}}}
-
-Mouse {{{
+scrollback_pager_history_Size 999999
 mouse_hide_wait -1.0
-url_prefixes http https file ftp
 strip_trailing_spaces smart
 rectangle_select_modifiers alt
 focus_follows_mouse yes
-}}}
-
-Window layout {{{
 remember_window_size  yes
 enabled_layouts all
 hide_window_decorations yes
-}}}
-
-Color scheme {{{
-foreground #dddddd
-background #000000
-dynamic_background_opacity yes
-color0 #000000
-color8 #767676
-#: black
-color1 #cc0403
-color9 #f2201f
-#: red
-color2  #19cb00
-color10 #23fd00
-#: green
-color3  #cecb00
-color11 #fffd00
-#: yellow
-color4  #0d73cc
-color12 #1a8fff
-#: blue
-color5  #cb1ed1
-color13 #fd28ff
-#: magenta
-color6  #0dcdcd
-color14 #14ffff
-#: cyan
-color7  #dddddd
-color15 #ffffff
-#: white
-}}}
-
-Advanced {{{
 editor /usr/local/bin/nvim
 allow_remote_control yes
-}}}
-
-OS specific tweaks {{{
-macos_titlebar_color system
-# macos_option_as_alt both
-macos_quit_when_last_window_closed yes
 macos_traditional_fullscreen yes
 macos_show_window_title_in menubar
 macos_custom_beam_cursor yes
-}}}
-
-Keyboard shortcuts {{{
-kitty_mod cmd+shift
-
-Window management {{{
+kitty_mod cmd
 map kitty_mod+enter new_window
-map kitty_mod+y      launch nvim
-}}}
-
-Layout management {{{
+map kitty_mod+y launch nvim
+map kitty_mod+shift+c copy_to_clipboard
+map kitty_mod+shift+v paste_from_clipboard
 map kitty_mod+l next_layout
 map kitty_mod+p last_used_layout
 map kitty_mod+t goto_layout tall
 map kitty_mod+s goto_layout stack
-}}}
-
-}}}
