@@ -1,38 +1,46 @@
-/#!/bin/bash
+#!/bin/bash
+
+# create ~/bin and add it to $PATH
+mkdir -p ~/bin
+export PATH="$PATH:$HOME/bin"
 
 # install void-packages
-if [ $(lsb_release -i) == 'VoidLinux' ]; then
-        git clone https://github.com/void-linux/void-packages/ && cd void-packages
-        ./xbps-src binary-bootstrap
-        cd
-fi
-
-# install vim-plug
-if command -v nvim >/dev/null 2>&1; then
-        echo "Bootstraping nvim"
-        nvim '+PlugUpdate' '+PlugClean!' '+PlugUpdate' '+qall'
+if [ -x "$(command -v lsb_release)" ]; then
+        if [ $(lsb_release -si) == 'VoidLinux' ]; then
+        if [ ! -e ~/void-packages ]; then
+                echo "cloning void-packages and setting up xbps-src"
+                git clone https://github.com/void-linux/void-packages/ && cd void-packages
+                ./xbps-src binary-bootstrap
+                cd
+        fi
+        echo void-packages installed.
+        fi
 fi
 
 # install omz
-if [ ! -e "~/.oh-my-zsh" ]; then
-        echo Installing oh-my-zsh
-        sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+if [ ! -e ~/.oh-my-zsh ]; then
+        echo oh-my-zsh not found. \n Installing omz. . .
+        #sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 fi
+echo oh-my-zsh installed.
 
 # install zsh-syntax-highlighting
-if [ ! -e "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting" ]; then
-        echo Installing zsh-syntax-highlighting
+if [ ! -e ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting ]; then
+        echo zsh-syntax-highlighting not found. \n Installing zsh-syntax-highlighting. . .
         git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 fi
+echo zsyh-syntax-highlighting installed.
 
 # install zsh-autosuggestions
-if [ ! -e "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions" ]; then
-        echo Installing zsh-autosuggestions
+if [ ! -e ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions ]; then
+        echo zsh-autosuggestions not found. \n Installing zsh-autosuggestions. . .
         git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 fi
+echo zsh-autosuggestions installed.
 
 if [ ! -x "$(command -v pfetch)" ]; then
-        elif [ -x "$(command -v apt-get)" ]; then sudo apt-get install pfetch
+        echo pfetch not found. \n Installing pfetch. . .
+        if [ -x "$(command -v apt-get)" ]; then sudo apt-get install pfetch
         elif [ -x "$(command -v brew)" ]; then brew install pfetch
         elif [ -x "$(command -v dnf)" ]; then sudo dnf install pfetch
         elif [ -x "$(command -v pacman)" ]; then sudo pacman -S pfetch
@@ -45,3 +53,4 @@ if [ ! -x "$(command -v pfetch)" ]; then
                 sudo make install
         fi
 fi
+echo pfetch installed.
