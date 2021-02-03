@@ -8,4 +8,10 @@ Dotfiles are meant for my personal use but in case you would like to use some or
 
 ## Screenshots
 
--- coming soon --
+macOS 11.2 Big Sur: 
+- bar — [Übersicht](http://tracesof.net/uebersicht/), (a combination of [simple-bar](https://github.com/Jean-Tinland/simple-bar) and [pecan](https://github.com/zzzeyez/pecan) widgets)
+- firefox — aurora theme with [blurredfox](https://github.com/manilarome/blurredfox) css
+- terminal — [kitty](https://sw.kovidgoyal.net/kitty/) with [oh-my-zsh](https://ohmyz.sh) themes and [homebrew](https://brew.sh) running
+- editor — [neovim](https://neovim.io); pdf-viewer [zathura](https://pwmt.org/projects/zathura/) (macOS port is [homebrew-zathura](https://github.com/zegervdv/homebrew-zathura))
+
+![screenshot #1](screenshot-1.png)
