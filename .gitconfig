@@ -2,4 +2,6 @@
 	email = kabirg108@gmail.com
 	name = Kabir Gupta
 [credential]
-	helper = store
+    helper = store
+[pull]
+    rebase = false
