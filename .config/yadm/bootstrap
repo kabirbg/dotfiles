@@ -4,6 +4,16 @@
 mkdir -p ~/bin
 export PATH="$PATH:$HOME/bin"
 
+# install homebrew
+if [ $(uname) == 'Darwin' ]; then
+        if [ ! -x $(command -v brew) ]; then
+                echo Installing homebrew...
+                /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+                export HOMEBREW_BUNDLE_FILE=/Users/Kabir/.Brewfile
+        fi
+        echo homebrew installed.
+fi
+
 # install void-packages
 if [ -x "$(command -v lsb_release)" ]; then
         if [ $(lsb_release -si) == 'VoidLinux' ]; then
@@ -19,14 +29,14 @@ fi
 
 # install omz
 if [ ! -e ~/.oh-my-zsh ]; then
-        echo oh-my-zsh not found. \n Installing omz. . .
+        echo oh-my-zsh not found. \n Installing omz...
         #sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 fi
 echo oh-my-zsh installed.
 
 # install zsh-syntax-highlighting
 if [ ! -e ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting ]; then
-        echo zsh-syntax-highlighting not found. \n Installing zsh-syntax-highlighting. . .
+        echo zsh-syntax-highlighting not found. \n Installing zsh-syntax-highlighting...
         git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 fi
 echo zsyh-syntax-highlighting installed.
@@ -38,6 +48,7 @@ if [ ! -e ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions ]; then
 fi
 echo zsh-autosuggestions installed.
 
+# install pfetch
 if [ ! -x "$(command -v pfetch)" ]; then
         echo pfetch not found. \n Installing pfetch. . .
         if [ -x "$(command -v brew)" ]; then brew install pfetch
@@ -53,3 +64,14 @@ if [ ! -x "$(command -v pfetch)" ]; then
         fi
 fi
 echo pfetch installed.
+
+# brew bundle
+if [ -x "$(command -v brew)" ]; then
+        echo -n "run brew bundle? " 
+        read ans
+        if [[ $ans == 'y' || $ans == 'Y' ]]; then
+                brew bundle --file ~/.Brewfile
+                echo all homebrew packages are installed and up-to-date.
+        fi
+        echo bootstrap all done, exiting now...
+fi
