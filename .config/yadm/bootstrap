@@ -40,8 +40,7 @@ echo zsh-autosuggestions installed.
 
 if [ ! -x "$(command -v pfetch)" ]; then
         echo pfetch not found. \n Installing pfetch. . .
-        if [ -x "$(command -v apt-get)" ]; then sudo apt-get install pfetch
-        elif [ -x "$(command -v brew)" ]; then brew install pfetch
+        if [ -x "$(command -v brew)" ]; then brew install pfetch
         elif [ -x "$(command -v dnf)" ]; then sudo dnf install pfetch
         elif [ -x "$(command -v pacman)" ]; then sudo pacman -S pfetch
         elif [-x "$(command -v pkg)" ]; then sudo pkg install pfetch
