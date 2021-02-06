@@ -55,3 +55,7 @@
 ;;
 ;; set DocView conversion refresh interval to 1 second
 (setq doc-view-conversion-refresh-interval 1)
+
+;; set shortcuts to increase/decrease zoom level
+(global-set-key [C-mouse-4] 'text-scale-increase)
+(global-set-key [C-mouse-5] 'text-scale-decrease)
