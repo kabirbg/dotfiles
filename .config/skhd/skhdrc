@@ -8,7 +8,7 @@
 # shortcuts to open apps
 ctrl - return : kitty
 ctrl + shift - return : nvim
-alt - return : open -a Firefox
+alt - return : open -a 'Firefox Nightly'
 ctrl - n : open -a Notion
 
 # screencapture
