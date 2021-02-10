@@ -70,7 +70,7 @@ if [ -x "$(command -v brew)" ]; then
         echo -n "run brew bundle? " 
         read ans
         if [[ $ans == 'y' || $ans == 'Y' ]]; then
-                brew bundle --file ~/.Brewfile
+                brew bundle --global
                 echo all homebrew packages are installed and up-to-date.
         fi
         echo bootstrap all done, exiting now...
