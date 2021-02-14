@@ -19,7 +19,7 @@ source $ZSH/oh-my-zsh.sh
 
 # aliases
 alias a="pmset sleepnow"
-alias empty="rm -ri ~/.Trash/*"
+alias empty="rm -rf ~/.Trash/*"
 alias wttr="curl wttr.in"
 alias icat="kitty +kitten icat"
 alias d="kitty +kitten diff"
