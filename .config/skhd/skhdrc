@@ -10,7 +10,8 @@ ctrl - return : kitty
 ctrl + shift - return : nvim
 alt - return : open -a 'Firefox Nightly'
 ctrl - n : open -a Notion
-ctrl - s : open -a 'Skype'
+ctrl - s : open -a Skype
+ctrl - t : open -a Thunderbird
 
 # screencapture
 ctrl - s : screencapture -ixu
