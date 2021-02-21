@@ -7,9 +7,8 @@
 
 # shortcuts to open apps
 ctrl - return : kitty
-ctrl + shift - return : nvim
+ctrl + shift - return : kitty nvim
 alt - return : open -a 'Firefox Nightly'
-ctrl - n : open -a Notion
 ctrl - k : open -a Skype
 ctrl - t : open -a Thunderbird
 ctrl - a : open -a 'Adobe Connect'
@@ -24,6 +23,9 @@ ctrl - escape : skhd --reload
 
 # restart yabai:
 ctrl + alt - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+
+# sleep:
+fn - escape : pmset sleepnow
 
 ###########
 # WINDOWS #
@@ -60,19 +62,23 @@ shift + ctrl - 0 : yabai -m space --balance
 # SPACES #
 ##########
 
-# create desktop, move window and follow focus - uses jq for parsing json (brew install jq)
+# create desktop
+ctrl - n : yabai -m space --create
+
+# create desktop and follow focus
+ctrl + alt - n : yabai -m space --create && \
+                 index="$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')" && \
+                 yabai -m space --focus "${index}"
+
+# create desktop, move window and follow focus
 shift + ctrl - n : yabai -m space --create && \
                    index="$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')" && \
                    yabai -m window --space "${index}" && \
                    yabai -m space --focus "${index}"
 
-# create desktop and follow focus - uses jq for parsing json (brew install jq)
-ctrl + alt - n : yabai -m space --create && \
-                 index="$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')" && \
-                 yabai -m space --focus "${index}"
-
 # destroy desktop
-ctrl + alt - w : yabai -m space --destroy
+ctrl - w : yabai -m space --destroy && \
+           yabai -m space --focus recent
 
 # fast focus desktop
 ctrl - down : yabai -m space --focus recent
