@@ -6,7 +6,10 @@ export VISUAL="/usr/local/bin/emacs"
 export EDITOR="/usr/local/bin/nvim"
 
 # oh-my-zsh settings
-export ZSH="/Volumes/Home/.oh-my-zsh"
+if [ "$(uname)" = "Darwin" ]
+then export ZSH="/Users/Kabir/.oh-my-zsh"
+else export ZSH="/home/.oh-my-zsh"
+fi
 ZSH_THEME=RANDOM
 DISABLE_UPDATE_PROMPT="true"
 export UPDATE_ZSH_DAYS=1
