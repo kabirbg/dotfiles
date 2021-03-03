@@ -13,6 +13,7 @@ ctrl - k : open -a Skype
 ctrl - t : open -a Thunderbird
 ctrl - a : open -a 'Adobe Connect'
 ctrl - e : open -a Emacs
+ctrl - 0x2B : open -a 'System Preferences'
 
 # screencapture
 ctrl - s : screencapture -ixu default
