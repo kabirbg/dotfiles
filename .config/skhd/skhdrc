@@ -10,7 +10,7 @@ ctrl - return : kitty
 ctrl + shift - return : kitty nvim
 alt - return : open -a 'Firefox Nightly'
 ctrl - k : open -a Skype
-ctrl - t : open -a Thunderbird
+ctrl - m : open -a Mailspring
 ctrl - a : open -a 'Adobe Connect'
 ctrl - e : open -a Emacs
 ctrl - 0x2B : open -a 'System Preferences'
