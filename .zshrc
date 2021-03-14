@@ -32,6 +32,7 @@ alias wttr="curl wttr.in"
 alias icat="kitty +kitten icat"
 alias d="kitty +kitten diff"
 alias clip="kitty +kitten clipboard"
+alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
 
 # kitty
 autoload -Uz compinit
