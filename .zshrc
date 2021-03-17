@@ -27,7 +27,7 @@ export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/h
 
 # aliases
 alias a="pmset sleepnow"
-alias empty="rm -rf ~/.Trash/*"
+alias empty="ls -A ~/.Trash/ && rm -rf ~/.Trash/*"
 alias wttr="curl wttr.in"
 alias icat="kitty +kitten icat"
 alias d="kitty +kitten diff"
