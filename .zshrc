@@ -27,12 +27,14 @@ export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/h
 
 # aliases
 alias a="pmset sleepnow"
-alias empty="ls -A ~/.Trash/ && rm -rf ~/.Trash/*"
+alias empty="ls -A ~/.Trash/* && rm -rf ~/.Trash/*"
 alias wttr="curl wttr.in"
 alias icat="kitty +kitten icat"
 alias d="kitty +kitten diff"
 alias clip="kitty +kitten clipboard"
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
+alias y2d='youtube-dl'
+alias pseudo='sudo'
 
 # kitty
 autoload -Uz compinit
