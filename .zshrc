@@ -2,7 +2,6 @@
 export XDG_RUNTIME_DIR=/tmp/
 
 # Set neovim as default text editor
-export VISUAL="/usr/local/bin/emacs"
 export EDITOR="/usr/local/bin/nvim"
 
 # oh-my-zsh settings
