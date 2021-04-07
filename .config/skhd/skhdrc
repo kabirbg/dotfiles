@@ -63,9 +63,6 @@ shift + ctrl - 0 : yabai -m space --balance
 # SPACES #
 ##########
 
-# create desktop
-ctrl - n : yabai -m space --create
-
 # create desktop and follow focus
 ctrl + alt - n : yabai -m space --create && \
                  index="$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')" && \
