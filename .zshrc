@@ -7,7 +7,7 @@ export EDITOR="/usr/local/bin/nvim"
 # oh-my-zsh settings
 if [ "$(uname)" = "Darwin" ]
 then export ZSH="/Users/Kabir/.oh-my-zsh"
-else export ZSH="/home/.oh-my-zsh"
+else export ZSH="/home/kabir/.oh-my-zsh"
 fi
 ZSH_THEME=RANDOM
 DISABLE_UPDATE_PROMPT="true"
