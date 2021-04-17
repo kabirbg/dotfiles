@@ -2,7 +2,7 @@
 
 # create ~/bin and add it to $PATH
 mkdir -p ~/bin
-export PATH="$PATH:$HOME/bin"
+export PATH="$HOME/bin:$PATH"
 
 # install homebrew
 if [ $(uname) == 'Darwin' ]; then
@@ -51,17 +51,10 @@ echo zsh-autosuggestions installed.
 # install pfetch
 if [ ! -x "$(command -v pfetch)" ]; then
         echo pfetch not found. \n Installing pfetch. . .
-        if [ -x "$(command -v brew)" ]; then brew install pfetch
-        elif [ -x "$(command -v dnf)" ]; then sudo dnf install pfetch
-        elif [ -x "$(command -v pacman)" ]; then sudo pacman -S pfetch
-        elif [-x "$(command -v pkg)" ]; then sudo pkg install pfetch
-        elif [-x "$(command -v xbps)" ]; then sudo xbps-install -S pfetch
-        else
-                git clone https://github.com/dylanaraps/pfetch
-                cd pfetch
-                echo Installing pfetch
-                sudo make install
-        fi
+        git clone https://github.com/unah77/pfetch
+        cd pfetch
+        echo Installing pfetch
+        sudo make install
 fi
 echo pfetch installed.
 
