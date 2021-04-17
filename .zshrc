@@ -9,7 +9,7 @@ if [ "$(uname)" = "Darwin" ]
 then export ZSH="/Users/Kabir/.oh-my-zsh"
 else export ZSH="/home/kabir/.oh-my-zsh"
 fi
-ZSH_THEME=RANDOM
+ZSH_THEME=random
 DISABLE_UPDATE_PROMPT="true"
 export UPDATE_ZSH_DAYS=1
 ENABLE_CORRECTION="true"
