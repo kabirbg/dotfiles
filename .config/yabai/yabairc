@@ -35,8 +35,15 @@ yabai -m config window_gap                   0
 
 # bar stuff
 yabai -m config external_bar         all:27:0
+yabai -m signal --add event=space_changed action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"nibar-spaces-jsx\"'"
+yabai -m signal --add event=window_focused action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"nibar-windows-jsx\"'"
+yabai -m signal --add event=window_destroyed action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"nibar-windows-jsx\"'"
+yabai -m signal --add event=window_created action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"nibar-windows-jsx\"'"
+yabai -m signal --add event=space_changed action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"nibar-windows-jsx\"'"
 
 # caffienate while AC is running
-while [ $(pidof "Adobe Connect") != $(pidof "Adobe Connect ") ]; do caffeinate; done
+while [ $(pidof "Adobe Connect") != $(pidof "Adobe Connect ") ]; do
+        caffeinate
+done
 
 echo "yabai configuration loaded.."
