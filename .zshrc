@@ -35,5 +35,4 @@ autoload -Uz compinit
 compinit
 kitty + complete setup zsh | source /dev/stdin
 
-figlet hello child | cowsay | lolcat
 pfetch
