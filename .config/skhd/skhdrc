@@ -8,7 +8,7 @@
 # shortcuts to open apps
 ctrl - return : kitty
 ctrl + shift - return : kitty nvim
-alt - return : open -a 'Firefox Nightly'
+ctrl - return : open -a 'Firefox Nightly'
 ctrl - k : open -a Skype
 ctrl - t : open -a Thunderbird
 ctrl - a : open -a 'Adobe Connect'
@@ -16,17 +16,17 @@ ctrl - e : emacs
 ctrl - 0x2B : open -a 'System Preferences'
 
 # screencapture
-ctrl - s : screencapture -ixu default
-shift + ctrl - s : screencapture -cix
+0x6E : screencapture -ixu default
+shift - 0x6E: screencapture -cix
 
 # make skhd reload its configuration files:
 ctrl - escape : skhd --reload
 
 # restart yabai:
-ctrl + alt - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+ctrl + shift - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 
 # sleep:
-fn - escape : pmset sleepnow
+fn - escape: pmset sleepnow
 
 ###########
 # WINDOWS #
@@ -46,13 +46,13 @@ shift + ctrl - k : yabai -m window --resize top:0:-20
 shift + ctrl - l : yabai -m window --resize right:20:0
 
 # decrease window size
-shift + ctrl + alt - h : yabai -m window --resize left:-20:0
-shift + ctrl + alt - j : yabai -m window --resize bottom:0:20
-shift + ctrl + alt - k : yabai -m window --resize top:0:-20
-shift + ctrl + alt - l : yabai -m window --resize right:20:0
+shift + ctrl - h : yabai -m window --resize left:-20:0
+shift + ctrl - j : yabai -m window --resize bottom:0:20
+shift + ctrl - k : yabai -m window --resize top:0:-20
+shift + ctrl - l : yabai -m window --resize right:20:0
 
 # float / unfloat window and center on screen
-ctrl + shift - space : yabai -m window --toggle float;\
+shift + ctrl - space : yabai -m window --toggle float;\
           yabai -m window --grid 4:4:1:1:2:2
 
 # balance size of windows
@@ -64,7 +64,7 @@ shift + ctrl - 0 : yabai -m space --balance
 ##########
 
 # create desktop and follow focus
-ctrl + alt - n : yabai -m space --create && \
+alt + ctrl - n : yabai -m space --create && \
                  index="$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')" && \
                  yabai -m space --focus "${index}"
 
