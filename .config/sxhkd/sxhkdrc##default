@@ -1,29 +1,39 @@
-#
-# wm independent hotkeys
-#
+# config for sxhkd, simple x hotkey daemon
 
-# terminal emulator
-alt + Return
-	kitty
-
-# program launcher
-alt + @space
+# shortcuts to open apps
+super + @space
 	rofi -show run
+super + Return
+	kitty
+super + shift + return
+	kitty nvim
+super + k
+	skypeforlinux
+super + t
+    thunderbird
+super + e
+    emacs
+alt + Return
+    brave
+alt + shift + Return
+    firefox
+
+#screencapture
+super + s
+    scrot -s "~/.screenshots/$(date +'%D.%T').png"
+super + shift + s
+    scrot -se 'xclip -selection clipboard -t image/png -i $f'
 
 # make sxhkd reload its configuration files:
-alt + Escape
+super + Escape
 	pkill -USR1 -x sxhkd
 
-#
-# bspwm hotkeys
-#
-
 # quit/restart bspwm
-alt + shift + {q,r}
+super + shift + {q,r}
 	bspc {quit,wm -r}
 
 # close and kill
-alt + {_,shift + }w
+super + {_,shift + }w
 	bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
