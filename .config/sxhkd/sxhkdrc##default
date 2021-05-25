@@ -2,7 +2,7 @@
 
 # shortcuts to open apps
 super + @space
-	rofi -show run
+	rofi -modi drun -show drun -show-icons
 super + Return
 	kitty
 super + shift + return
