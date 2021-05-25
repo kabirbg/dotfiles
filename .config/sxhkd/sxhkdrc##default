@@ -14,9 +14,9 @@ super + t
 super + e
     emacs
 alt + Return
-    brave
-alt + shift + Return
     firefox
+alt + shift + Return
+    brave
 
 #screencapture
 super + s
