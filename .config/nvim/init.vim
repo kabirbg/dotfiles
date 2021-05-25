@@ -9,3 +9,4 @@ set cursorline
 set mouse=a
 set wrap
 set linebreak
+set clipboard+=unnamedplus

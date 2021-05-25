@@ -19,9 +19,9 @@ alt + shift + Return
     brave
 
 #screencapture
-super + s
-    scrot -s "~/.screenshots/$(date +'%D.%T').png"
-super + shift + s
+Print
+    scrot -s "~/Pictures/screenshot-$(date +'%D-%T').png"
+shift + Print
     scrot -se 'xclip -selection clipboard -t image/png -i $f'
 
 # make sxhkd reload its configuration files:
