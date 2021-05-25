@@ -3,7 +3,12 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 if [[ $(xrandr | grep eDP) ]]; then 
-        xrandr --output eDP-1 --scale 0.75
+        xrandr --output eDP-1 --scale 0.5
+fi
+
+if [[ $(xinput --list-props "Apple Inc. Magic Trackpad 2") ]]; then
+	xinput --set-prop "Apple Inc. Magic Trackpad 2" "libinput Natural Scrolling Enabled" 1
+	xinput --set-prop "Apple Inc. Magic Trackpad 2" "libinput Tapping Enabled" 1
 fi
 
 polybar status
