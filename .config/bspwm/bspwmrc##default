@@ -12,7 +12,6 @@ if [[ $(xinput --list-props "Apple Inc. Magic Trackpad 2") ]]; then
 fi
 
 xsetroot -cursor_name left_ptr
-feh --bg-tile ~/Pictures/1760x990#8c1515.png
 
 polybar status
 bspc monitor -d I II III IV V VI VII VIII IX X
