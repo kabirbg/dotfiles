@@ -3,6 +3,8 @@
 # shortcuts to open apps
 super + @space
 	rofi -modi drun -show drun -show-icons
+alt + @space
+    rofimoji 
 super + Return
 	kitty
 super + shift + return
