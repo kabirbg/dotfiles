@@ -13,7 +13,6 @@ fi
 
 xsetroot -cursor_name left_ptr
 
-polybar status
 bspc monitor -d I II III IV V VI VII VIII IX X
 
 bspc config border_width            2
@@ -27,5 +26,7 @@ bspc config gapless_monocle      true
 bspc rule -a thunderbird desktop='^1'
 bspc rule -a skypeforlinux desktop='^1'
 bspc rule -a firefox desktop='^3'
+
+polybar status
 
 echo bspwm configuration loaded.
