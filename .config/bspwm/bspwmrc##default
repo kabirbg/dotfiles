@@ -27,3 +27,5 @@ bspc config gapless_monocle      true
 bspc rule -a thunderbird desktop='^1'
 bspc rule -a skypeforlinux desktop='^1'
 bspc rule -a firefox desktop='^3'
+
+echo bspwm configuration loaded.
