@@ -3,7 +3,7 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 if [ "$(hostname)" == "iMac" ]; then
-    xrandr -s 1920x1080
+    xrandr -s 2560x1440 
 fi
 
 if [[ $(xinput --list-props "Apple Inc. Magic Trackpad 2") ]]; then
