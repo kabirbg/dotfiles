@@ -5,7 +5,10 @@ fi
 cd #because it's starting at / for some reason
 
 # XDG_RUNTIME_DIR (for linux)
-export XDG_RUNTIME_DIR=/run/user/1000/
+if [ "$(uname)" = "Darwin" ]
+then export XDG_RUNTIME_DIR=/tmp/
+else export XDG_RUNTIME_DIR=/run/user/1000/
+fi
 
 # set background image (uses feh)
 feh --bg-tile ~/Pictures/3840x2160#8c1515.png
