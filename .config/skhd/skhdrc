@@ -22,8 +22,8 @@ shift - 0x6E: screencapture -cix
 # make skhd reload its configuration files:
 ctrl - escape : skhd --reload
 
-# restart yabai:
-ctrl + shift - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+# restart yabai and spacebar:
+ctrl + shift - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.spacebar" "gui/${UID}/homebrew.mxcl.yabai"
 
 # sleep:
 fn - escape: pmset sleepnow
