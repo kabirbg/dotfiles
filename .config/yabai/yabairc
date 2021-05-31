@@ -39,7 +39,7 @@ yabai -m space 4 --label study
 yabai -m space 5 --label extra
 
 # bar stuff
-yabai -m config external_bar         all:20:0
+yabai -m config external_bar         all:$(spacebar -m config height):0
 
 # caffienate while AC is running
 while [ $(pidof "Adobe Connect") != $(pidof "Adobe Connect ") ]; do caffeinate; done
