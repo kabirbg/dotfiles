@@ -3,18 +3,19 @@
 #autostart programs
 pgrep -x sxhkd > /dev/null || sxhkd &
 xscreensaver --no-splash &
-onedrive --monitor &
+(onedrive --monitor > .local/share/onedrive.log ) &
 polybar status &
 
 #imac customizatiosn
 if [ "$(hostname)" == "iMac" ]; then
-    xrandr -s 2560x1440 
+    xrandr -s 3840x2160
 fi
 if [[ $(xinput --list-props "Apple Inc. Magic Trackpad 2") ]]; then
 	xinput --set-prop "Apple Inc. Magic Trackpad 2" "libinput Natural Scrolling Enabled" 1
 	xinput --set-prop "Apple Inc. Magic Trackpad 2" "libinput Tapping Enabled" 1
 fi
 
+xrdb ~/.Xresources
 xsetroot -cursor_name left_ptr
 
 #general bspwm config

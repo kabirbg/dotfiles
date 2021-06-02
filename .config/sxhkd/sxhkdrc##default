@@ -22,7 +22,7 @@ alt + shift + Return
 
 #screencapture
 Print
-    scrot -s "~/Pictures/screenshot-$(date +'%D-%T').png"
+    scrot -se 'mv $f ~/Pictures/'
 shift + Print
     scrot -se 'xclip -selection clipboard -t image/png -i $f'
 
