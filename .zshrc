@@ -1,5 +1,6 @@
 if [ "$(uname)" = "Darwin" ]
-then export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Users/Kabir/.emacs.d/bin:/opt/X11/bin:/Applications/kitty.app/Contents/MacOS"
+then export PATH="/Library/TeX/texbin:/Users/Kabir/.emacs.d/bin:/opt/X11/bin:/Applications/kitty.app/Contents/MacOS:$PATH"
+else export PATH="/home/kabir/.emacs.d/bin:$PATH"
 fi
 
 cd #because it's starting at / for some reason
