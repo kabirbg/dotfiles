@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-settings 6.00 for kabir on Wed Jun  2 20:03:25 2021.
+# Written by xscreensaver-settings 6.00 for kabir on Fri Jun  4 17:50:44 2021.
 # https://www.jwz.org/xscreensaver/
 
 timeout:	0:10:00
@@ -282,6 +282,7 @@ programs:								      \
   GL: 				gibson -root				    \n\
   GL: 				headroom -root				    \n\
   GL: 				sphereeversion -root			    \n\
+				electricsheep --root 1			    \n\
 
 
 pointerHysteresis:  10
