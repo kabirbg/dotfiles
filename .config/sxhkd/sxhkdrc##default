@@ -34,9 +34,17 @@ super + Escape
 super + shift + {q,r}
 	bspc {quit,wm -r}
 
+#suspend
+super + shift + Escape
+    systemctl suspend
+
 # close and kill
 super + {_,shift + }w
 	bspc node -{c,k}
+
+# float/unfloat a window
+super + shift + space
+    bspc node -t '~floating'
 
 # alternate between the tiled and monocle layout
 alt + m
