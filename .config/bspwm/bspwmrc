@@ -1,1 +1,37 @@
-bspwmrc##default
+#!/bin/bash
+
+#autostart programs
+pgrep -x sxhkd > /dev/null || sxhkd &
+xscreensaver --no-splash &
+(onedrive --monitor > .local/share/onedrive.log ) &
+polybar status &
+
+#imac customizatiosn
+if [ "$(hostname)" == "iMac" ]; then
+    xrandr -s 3840x2160
+fi
+if [[ $(xinput --list-props "Apple Inc. Magic Trackpad 2") ]]; then
+	xinput --set-prop "Apple Inc. Magic Trackpad 2" "libinput Natural Scrolling Enabled" 1
+	xinput --set-prop "Apple Inc. Magic Trackpad 2" "libinput Tapping Enabled" 1
+fi
+
+xrdb ~/.Xresources
+xsetroot -cursor_name left_ptr
+
+#general bspwm config
+bspc monitor -d I II III IV V VI VII VIII IX X
+bspc config border_width            2
+bspc config window_gap              0
+bspc config focus_follows_pointer   true
+bspc config split_ratio          0.5
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+#app rules
+bspc rule -a Mail desktop='^1'
+bspc rule -a Skype desktop='^1'
+bspc rule -a firefox desktop='^3'
+bspc rule -a Zathura state=tiled
+bspc rule -a Emacs state=tiled
+
+echo bspwm configuration loaded.
