@@ -48,4 +48,4 @@ autoload -Uz compinit
 compinit
 kitty + complete setup zsh | source /dev/stdin
 
-fortune | cowsay | lolcat
+fortune | cowsay -n | lolcat
