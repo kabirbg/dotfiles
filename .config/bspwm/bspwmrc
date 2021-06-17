@@ -10,13 +10,13 @@ polybar status &
 if [ "$(hostname)" == "iMac" ]; then
     xrandr -s 3840x2160
 fi
-if [[ $(xinput --list-props "Apple Inc. Magic Trackpad 2") ]]; then
-	xinput --set-prop "Apple Inc. Magic Trackpad 2" "libinput Natural Scrolling Enabled" 1
-	xinput --set-prop "Apple Inc. Magic Trackpad 2" "libinput Tapping Enabled" 1
-fi
 
+#x session config
 xrdb ~/.Xresources
 xsetroot -cursor_name left_ptr
+xinput --set-prop "Apple Inc. Magic Trackpad 2" "libinput Natural Scrolling Enabled" 1
+xinput --set-prop "Apple Inc. Magic Trackpad 2" "libinput Tapping Enabled" 1
+xinput --set-prop "PixArt Lenovo USB Optical Mouse" "libinput Natural Scrolling Enabled" 1
 
 #general bspwm config
 bspc monitor -d I II III IV V VI VII VIII IX X
