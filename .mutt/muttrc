@@ -9,3 +9,5 @@ set imap_user = "kabirg108@gmail.com"
 set folder = "imaps://imap.gmail.com:993"
 set spoolfile = "+INBOX"
 set ssl_force_tls = yes
+
+source "~/.mutt/passwd"
