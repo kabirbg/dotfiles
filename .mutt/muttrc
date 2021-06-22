@@ -6,7 +6,6 @@ set envelope_from = yes
 set smtp_url = "smtps://kabirg108@gmail.com@smtp.gmail.com:465/"
 set smtp_authenticators = 'gssapi:login'
 set imap_user = "kabirg108@gmail.com"
-set imap_pass = "Saraswati721"
 set folder = "imaps://imap.gmail.com:993"
 set spoolfile = "+INBOX"
 set ssl_force_tls = yes
