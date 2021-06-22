@@ -15,7 +15,7 @@ fi
 feh --bg-tile ~/Pictures/3840x2160#8c1515.png
 
 # Set neovim as default text editor
-export EDITOR="/usr/local/bin/nvim"
+export EDITOR="$(which nvim)"
 
 # oh-my-zsh settings
 if [ "$(uname)" = "Darwin" ]
