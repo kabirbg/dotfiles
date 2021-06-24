@@ -26,7 +26,7 @@ alt + shift + Return
 Print
     scrot -se 'mv $f ~/Pictures/'
 shift + Print
-    scrot -se 'xclip -selection clipboard -t image/png -i $f'
+    scrot -se 'xclip -selection clipboard -t image/png -i $f && rm $f'
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -36,9 +36,9 @@ super + Escape
 super + shift + {q,r}
 	bspc {quit,wm -r}
 
-#suspend
+#put display to sleep
 super + shift + Escape
-    systemctl suspend
+    xscreensaver-command -lock && xset dpms force off
 
 # close and kill
 super + {_,shift + }w
