@@ -1,6 +1,6 @@
 # Configuration for the Kitty Terminal Emulator (https://sw.kovidgoyal.net/kitty/)
 font_family      Fira Code Retina
-font_size 12.0
+font_size 14.0
 font_features FiraCode-Retina +zero +onum
 cursor_shape beam
 cursor_beam_thickness 1.5
