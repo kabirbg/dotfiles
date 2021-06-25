@@ -29,7 +29,7 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="mm/dd/yyyy"
-plugins=(git ruby colored-man-pages command-not-found osx forklift lol themes emoji-clock rand-quote zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git ruby colored-man-pages command-not-found osx forklift lol emotty themes emoji-clock rand-quote zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # aliases
