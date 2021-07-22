@@ -1,5 +1,5 @@
 if [ "$(uname)" = "Darwin" ]
-then export PATH="/Library/TeX/texbin:/Users/Kabir/.emacs.d/bin:/opt/X11/bin:/Applications/kitty.app/Contents/MacOS:$PATH"
+then export PATH="/Library/TeX/texbin:/Users/Kabir/.emacs.d/bin:/opt/X11/bin:/Applications/kitty.app/Contents/MacOS:$PATH" && alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
 else export PATH="/home/kabir/bin:/home/kabir/.emacs.d/bin:/home/kabir/.local/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH"
 fi
 
@@ -32,6 +32,8 @@ HIST_STAMPS="mm/dd/yyyy"
 plugins=(git ruby colored-man-pages command-not-found osx forklift lol emotty themes emoji-clock rand-quote zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
+source /home/kabir/.functions
+
 # aliases
 alias a="pmset sleepnow"
 alias empty="ls -A ~/.Trash/* && rm -rf ~/.Trash/*"
@@ -39,7 +41,6 @@ alias wttr="curl wttr.in"
 alias icat="kitty +kitten icat"
 alias d="kitty +kitten diff"
 alias clip="kitty +kitten clipboard"
-alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
 alias y2d='youtube-dl'
 alias pseudo='sudo'
 
