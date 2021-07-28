@@ -30,7 +30,7 @@ fi
 # install omz
 if [ ! -e ~/.oh-my-zsh ]; then
         echo oh-my-zsh not found. \n Installing omz...
-        #sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh) --unattended"
 fi
 echo oh-my-zsh installed.
 
