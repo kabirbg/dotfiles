@@ -1,0 +1,15 @@
+#!/bin/bash
+
+sms() {
+    local args="$@"
+    local phone_number name phone_type
+    khard phone --parsable | sort -u | fzf | IFS=$'\t' read -r phone_number name phone_type
+    if [[ -z "${phone_number}" ]]; then
+        echo No recipient was chosen >&2
+        return
+    else
+        echo "${name}"$'\t'"${phone_number}"$'\t'"${phone_type}" > ${_KDECONNECT_SMS_LAST_RECIPIENT}
+        kdeconnect-cli --name "Galaxy #14000605 " --send-sms "${args}" --destination "${phone_number}" && \
+        echo sent sms message to ${name} | fribidi
+    fi
+}
