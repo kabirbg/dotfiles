@@ -2,7 +2,7 @@
 
 # shortcuts to open apps
 super + @space
-	rofi -modi drun -show drun -show-icons
+    rofi -modi drun -show drun -show-icons
 alt + @space
     rofimoji 
 super + Return
@@ -88,10 +88,6 @@ alt + {p,b,comma,period}
 alt + {_,shift + }c
 	bspc node -f {next,prev}.local.!hidden.window
 
-# focus the next/previous desktop in the current monitor
-alt + bracket{left,right}
-	bspc desktop -f {prev,next}.local
-
 # focus the last node/desktop
 alt + {grave,Tab}
 	bspc {node,desktop} -f last
@@ -105,6 +101,10 @@ alt + {o,i}
 # focus or send to the given desktop
 super + {_,shift + }{1-9}
 	bspc {desktop -f,node -d} '^{1-9}'
+
+#focus or send to the next/previous desktop in the current monitor
+super + alt + {_,shift + }{h,l}
+    bspc {desktop -f, node -d} {prev,next}.local
 
 #
 # preselect
