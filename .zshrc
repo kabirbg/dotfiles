@@ -43,6 +43,7 @@ alias d="kitty +kitten diff"
 alias clip="kitty +kitten clipboard"
 alias y2d='youtube-dl'
 alias pseudo='sudo'
+alias brightness="xrandr --output eDP-1 --brightness"
 
 # kitty
 autoload -Uz compinit
