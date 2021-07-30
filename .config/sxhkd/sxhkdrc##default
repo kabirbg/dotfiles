@@ -34,13 +34,13 @@ super + Escape
 
 # media keys
 XF86AudioRaiseVolume
-    amixer set Master 10%+
-XF86AudioLowerVolume
-    amixer set Master 10%-
-shift + XF86AudioRaiseVolume
     amixer set Master 5%+
-shift + XF86AudioLowerVolume
+XF86AudioLowerVolume
     amixer set Master 5%-
+shift + XF86AudioRaiseVolume
+    amixer set Master 1%+
+shift + XF86AudioLowerVolume
+    amixer set Master 1%-
 XF86AudioMute
     amixer set Master 0%
 XF86AudioPlay
