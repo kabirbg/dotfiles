@@ -32,6 +32,24 @@ shift + Print
 super + Escape
 	pkill -USR1 -x sxhkd
 
+# media keys
+XF86AudioRaiseVolume
+    amixer set Master 10%+
+XF86AudioLowerVolume
+    amixer set Master 10%-
+shift + XF86AudioRaiseVolume
+    amixer set Master 5%+
+shift + XF86AudioLowerVolume
+    amixer set Master 5%-
+XF86AudioMute
+    amixer set Master 0%
+XF86AudioPlay
+    playerctl play-pause
+XF86AudioNext
+    playerctl next
+XF86AudioPrevious
+    playerctl previous
+
 # quit/restart bspwm
 super + shift + {q,r}
 	bspc {quit,wm -r}
