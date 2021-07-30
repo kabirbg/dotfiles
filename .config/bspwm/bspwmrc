@@ -6,6 +6,7 @@ xscreensaver --no-splash &
 (onedrive --monitor > .local/share/onedrive.log ) &
 polybar status &
 wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Qustodio/qapp/QAppTray.exe &
+playerctld daemon
 
 #imac customizatiosn
 if [ "$(hostname)" == "iMac" ]; then
