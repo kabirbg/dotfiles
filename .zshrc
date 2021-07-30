@@ -43,7 +43,11 @@ alias d="kitty +kitten diff"
 alias clip="kitty +kitten clipboard"
 alias y2d='youtube-dl'
 alias pseudo='sudo'
-alias brightness="xrandr --output eDP-1 --brightness"
+if [ ! -z "$(xrandr | grep eDP-1)" ]; then
+        alias brightness="xrandr --output eDP-1 --brightness"
+elif [ ! -z "$(xrandr | grep LVDS1)" ]; then
+        alias brightness="xrandr --output LVDS1 --brightness"
+fi
 
 # kitty
 autoload -Uz compinit
