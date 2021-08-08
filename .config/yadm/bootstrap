@@ -51,7 +51,7 @@ echo zsh-autosuggestions installed.
 # install pfetch
 if [ ! -x "$(command -v pfetch)" ]; then
         echo pfetch not found. \n Installing pfetch. . .
-        git clone https://github.com/unah77/pfetch
+        git clone https://github.com/dylanaraps/pfetch
         cd pfetch
         echo Installing pfetch
         sudo make install
