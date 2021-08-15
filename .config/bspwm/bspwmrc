@@ -19,6 +19,7 @@ xsetroot -cursor_name left_ptr
 xinput --set-prop "Apple Inc. Magic Trackpad 2" "libinput Natural Scrolling Enabled" 1
 xinput --set-prop "Apple Inc. Magic Trackpad 2" "libinput Tapping Enabled" 1
 xinput --set-prop "PixArt Lenovo USB Optical Mouse" "libinput Natural Scrolling Enabled" 1
+~/.fehbg
 
 #general bspwm config
 bspc monitor -d I II III IV V VI VII VIII IX X

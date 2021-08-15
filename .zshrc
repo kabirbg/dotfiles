@@ -12,7 +12,7 @@ else export XDG_RUNTIME_DIR=/run/user/1000/
 fi
 
 # set background image (uses feh)
-feh --bg-tile ~/Pictures/3840x2160#8c1515.png
+feh --bg-fill ~/.config/wallpaper
 
 # Set neovim as default text editor
 export EDITOR="$(command -v nvim)"
