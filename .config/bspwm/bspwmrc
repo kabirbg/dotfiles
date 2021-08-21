@@ -22,7 +22,7 @@ xinput --set-prop "PixArt Lenovo USB Optical Mouse" "libinput Natural Scrolling 
 ~/.fehbg
 
 #general bspwm config
-bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor -d I II III IV V VI VII VIII IX
 bspc config border_width            2
 bspc config window_gap              0
 bspc config focus_follows_pointer   true
@@ -34,6 +34,7 @@ bspc config gapless_monocle      true
 bspc rule -a Mail desktop='^1'
 bspc rule -a Skype desktop='^1'
 bspc rule -a firefox desktop='^3'
+bspc rule -a Spotify desktop='^9'
 bspc rule -a Zathura state=tiled
 bspc rule -a Emacs state=tiled
 
