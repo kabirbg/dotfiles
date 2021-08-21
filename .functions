@@ -13,3 +13,12 @@ sms() {
         echo sent sms message to ${name} | fribidi
     fi
 }
+
+spam () {
+	for ((i=0; i<$3; i++)) do
+		kdeconnect-cli -n "Galaxy #14000605 " --send-sms $1 --destination $2
+		echo Sent message
+		echo Waiting...
+		sleep 10
+	done
+}

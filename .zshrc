@@ -41,8 +41,11 @@ alias wttr="curl wttr.in"
 alias icat="kitty +kitten icat"
 alias d="kitty +kitten diff"
 alias clip="kitty +kitten clipboard"
-alias y2d='youtube-dl'
+alias ytd='youtube-dl'
 alias pseudo='sudo'
+if [ "$(uname)" != "Darwin" ]; then
+        alias open=xdg-open
+fi
 if [ ! -z "$(xrandr | grep eDP-1)" ]; then
         alias brightness="xrandr --output eDP-1 --brightness"
 elif [ ! -z "$(xrandr | grep LVDS1)" ]; then
