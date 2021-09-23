@@ -10,7 +10,7 @@ super + Return
 super + shift + return
 	kitty nvim
 super + k
-	skypeforlinux
+	exec /usr/lib/brave-bin/brave --profile-directory=Default --app-id=lljldmnnhjkandejalbjlndemhlcjepa
 super + t
     thunderbird
 super + e
