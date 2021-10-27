@@ -7,11 +7,7 @@
 
 # shortcuts to open apps
 ctrl - return : kitty
-ctrl + shift - return : kitty nvim
-ctrl - return : open -a 'Firefox Nightly'
-ctrl - k : open -a Skype
-ctrl - t : open -a Thunderbird
-ctrl + shift - a : open -a 'Adobe Connect'
+ctrl + shift - return : open -a Firefox
 ctrl - e : emacs
 ctrl - 0x2B : open -a 'System Preferences'
 
@@ -33,11 +29,10 @@ fn - escape: pmset sleepnow
 ###########
 
 # swap/warp windows
-ctrl - h : yabai -m window --warp west
-ctrl - j : yabai -m window --warp south
-ctrl - k : yabai -m window --warp north
-ctrl - l : yabai -m window --warp east
-ctrl - g : yabai -m window --swap largest
+ctrl - h : yabai -m window --swap west
+ctrl - j : yabai -m window --swap south
+ctrl - k : yabai -m window --swap north
+ctrl - l : yabai -m window --swap east
 
 # increase window size
 shift + ctrl - h : yabai -m window --resize left:-20:0
