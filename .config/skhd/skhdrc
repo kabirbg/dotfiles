@@ -16,8 +16,8 @@ ctrl - e : emacs
 ctrl - 0x2B : open -a 'System Preferences'
 
 # screencapture
-0x6E : screencapture -ixu default
-shift - 0x6E: screencapture -cix
+0x69: screencapture -ixu default
+shift - 0x69: screencapture -cix
 
 # make skhd reload its configuration files:
 ctrl - escape : skhd --reload
