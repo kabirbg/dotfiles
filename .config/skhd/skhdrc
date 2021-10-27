@@ -11,7 +11,7 @@ ctrl + shift - return : kitty nvim
 ctrl - return : open -a 'Firefox Nightly'
 ctrl - k : open -a Skype
 ctrl - t : open -a Thunderbird
-ctrl - a : open -a 'Adobe Connect'
+ctrl + shift - a : open -a 'Adobe Connect'
 ctrl - e : emacs
 ctrl - 0x2B : open -a 'System Preferences'
 
