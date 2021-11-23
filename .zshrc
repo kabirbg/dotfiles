@@ -1,5 +1,5 @@
 if [ "$(uname)" = "Darwin" ]
-then export PATH="/Library/TeX/texbin:/Users/Kabir/.emacs.d/bin:/opt/X11/bin:/Applications/kitty.app/Contents/MacOS:$PATH" && alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
+then export PATH="/Library/TeX/texbin:/Users/Kabir/.emacs.d/bin:/opt/X11/bin:/Applications/kitty.app/Contents/MacOS:/usr/local/sbin:$PATH" && alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
 else export PATH="/home/kabir/bin:/home/kabir/.emacs.d/bin:/home/kabir/.local/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH"
 fi
 
