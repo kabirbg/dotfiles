@@ -24,9 +24,9 @@ alt + shift + Return
 
 #screencapture
 Print
-    scrot -se 'mv $f ~/Pictures/'
+    scrot -s -e 'mv $f ~/Pictures/'
 shift + Print
-    scrot -se 'xclip -selection clipboard -t image/png -i $f && rm $f'
+    scrot -s -e 'xclip -selection clipboard -t image/png -i $f && rm $f'
 
 # make sxhkd reload its configuration files:
 super + Escape
