@@ -57,6 +57,8 @@ XF86AudioNext
     playerctl next
 XF86AudioPrevious
     playerctl previous
+XF86Eject
+    eject
 
 # quit/restart bspwm
 super + shift + {q,r}
