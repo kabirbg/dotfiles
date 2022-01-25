@@ -3,11 +3,11 @@
 #autostart programs
 pgrep -x sxhkd > /dev/null || sxhkd &
 xscreensaver --no-splash &
-(onedrive --monitor > .local/share/onedrive.log ) &
+(onedrive --monitor >& .local/share/onedrive.log ) &
 polybar status &
 spotifyd --no-daemon &
 playerctld daemon
-../backup.sh &
+(bin/backup.sh >& .local/share/backup.log) &
 
 #imac customizatiosn
 if [ "$(hostname)" == "iMac" ]; then
@@ -32,10 +32,9 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 #app rules
-bspc rule -a Mail desktop='^1'
-bspc rule -a Skype desktop='^1'
+bspc rule -a Thunderbird desktop='^1'
 bspc rule -a firefox desktop='^3'
-bspc rule -a Spotify desktop='^9'
+bspc rule -a Spotify desktop='^4'
 bspc rule -a Zathura state=tiled
 bspc rule -a Emacs state=tiled
 
