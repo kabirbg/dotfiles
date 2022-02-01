@@ -32,7 +32,7 @@ bspc config gapless_monocle      true
 
 #app rules
 bspc rule -a Thunderbird desktop='^1'
-bspc rule -a firefox desktop='^3'
+bspc rule -a firefoxdeveloperedition desktop='^3'
 bspc rule -a Spotify desktop='^4'
 bspc rule -a Zathura state=tiled
 bspc rule -a Emacs state=tiled
