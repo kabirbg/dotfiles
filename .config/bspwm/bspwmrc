@@ -4,6 +4,7 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 xscreensaver --no-splash &
 (onedrive --monitor >& .local/share/onedrive.log ) &
+(bin/backup.sh >& .local/share/backup.log) &
 polybar status &
 spotifyd --no-daemon &
 playerctld daemon
