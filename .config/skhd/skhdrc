@@ -25,7 +25,7 @@ ctrl - escape : skhd --reload
 ctrl + shift - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.spacebar" "gui/${UID}/homebrew.mxcl.yabai"
 
 # sleep:
-fn - escape: pmset sleepnow
+cmd + shift - escape: pmset sleepnow
 
 ###########
 # WINDOWS #
