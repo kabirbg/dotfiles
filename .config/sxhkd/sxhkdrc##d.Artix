@@ -17,6 +17,8 @@ super + e
     emacs
 super + b
     blender
+super + s
+    spotify
 alt + Return
     firefox-developer-edition
 alt + shift + Return
