@@ -3,7 +3,7 @@
 #autostart programs
 pgrep -x sxhkd > /dev/null || sxhkd &
 xscreensaver --no-splash &
-(onedrive --monitor >& .local/share/onedrive.log ) &
+(onedrive_tray --onedrive-path "/usr/sbin/onedrive" --onedrive-args "-m --enable-logging") &
 (bin/backup.sh >& .local/share/backup.log) &
 polybar status &
 spotifyd --no-daemon &
