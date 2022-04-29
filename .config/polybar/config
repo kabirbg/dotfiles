@@ -151,8 +151,8 @@ exec = python ${HOME}/.config/polybar/spotify_status.py -f '{artist}: {song}'
 format-underline = #1db954
 ;control players (optional)
 click-left = playerctl --player=spotify play-pause 
-;click-right = playerctl --player=spotify next 
-;click-middle = playerctl --player=spotify previous 
+click-right = playerctl --player=spotify next 
+click-middle = playerctl --player=spotify previous 
 
 [module/xbacklight]
 type = internal/xbacklight
