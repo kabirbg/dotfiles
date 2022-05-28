@@ -1,24 +1,13 @@
-if [ "$(uname)" = "Darwin" ]
-then export PATH="/Library/TeX/texbin:/Users/Kabir/.emacs.d/bin:/opt/X11/bin:/Applications/kitty.app/Contents/MacOS:/usr/local/sbin:$PATH" && alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
-else export PATH="/home/kabir/bin:/home/kabir/.emacs.d/bin:/home/kabir/.local/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH"
-fi
-
-cd #because it's starting at / for some reason
+export PATH="/home/kabir/bin:/home/kabir/.emacs.d/bin:/home/kabir/.local/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH"
 
 # XDG_RUNTIME_DIR (for linux)
-if [ "$(uname)" = "Darwin" ]
-then export XDG_RUNTIME_DIR=/tmp/
-else export XDG_RUNTIME_DIR=/run/user/1000/
-fi
+export XDG_RUNTIME_DIR=/run/user/1000/
 
 # Set neovim as default text editor
 export EDITOR="$(command -v nvim)"
 
 # oh-my-zsh settings
-if [ "$(uname)" = "Darwin" ]
-then export ZSH="/Users/Kabir/.oh-my-zsh"
-else export ZSH="/home/kabir/.oh-my-zsh"
-fi
+export ZSH="/home/kabir/.oh-my-zsh"
 ZSH_THEME=random
 DISABLE_UPDATE_PROMPT="true"
 export UPDATE_ZSH_DAYS=1
@@ -26,7 +15,7 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="mm/dd/yyyy"
-plugins=(git ruby colored-man-pages command-not-found macos forklift lol emotty themes emoji-clock rand-quote zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git ruby colored-man-pages command-not-found forklift lol emotty themes emoji-clock rand-quote zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 source /home/kabir/.functions
