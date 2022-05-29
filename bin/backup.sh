@@ -6,7 +6,7 @@ while true; do
                 find /media/kabir/backup -type f -printf '%T+ %p\n' | sort | awk -F ' ' '{print $2}' | head -n 1 | xargs rm -rvf
         done
         echo beginning backup @ $(date)
-        tar -cvf "/media/kabir/backup/$(date +'%F-%H.%M.%S').tar" /bin /etc /home /root /sbin /usr /var
+        tar cvzf "/media/kabir/backup/$(date +'%F-%H.%M.%S').tar" /bin /etc /home /opt /usr /var
         echo finished backup @ $(date)
         sleep 6h
 done
