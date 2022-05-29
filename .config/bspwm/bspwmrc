@@ -17,9 +17,8 @@ fi
 #x session config
 xrdb ~/.Xresources
 xsetroot -cursor_name left_ptr
-xinput --set-prop "Apple Inc. Magic Trackpad 2" "libinput Natural Scrolling Enabled" 1
-xinput --set-prop "Apple Inc. Magic Trackpad 2" "libinput Tapping Enabled" 1
-xinput --set-prop "PixArt Lenovo USB Optical Mouse" "libinput Natural Scrolling Enabled" 1
+xinput --set-prop "Nordic 2.4G Wireless Receiver Mouse" "libinput Natural Scrolling Enabled" 1
+xinput --set-prop "Nordic 2.4G Wireless Receiver Mouse" "libinput Accel Speed" -1
 ~/.fehbg
 
 #general bspwm config
@@ -39,3 +38,4 @@ bspc rule -a Zathura state=tiled
 bspc rule -a Emacs state=tiled
 
 echo bspwm configuration loaded.
+
