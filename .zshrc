@@ -32,30 +32,6 @@ alias pseudo='sudo'
 if [ "$(uname)" != "Darwin" ]; then
         alias open=xdg-open
 fi
-if [ ! -z "$(xrandr | grep eDP-1)" ]; then
-        alias brightness="xrandr --output eDP-1 --brightness"
-elif [ ! -z "$(xrandr | grep LVDS1)" ]; then
-        alias brightness="xrandr --output LVDS1 --brightness"
-fi
-
-# kitty
-autoload -Uz compinit
-compinit
-kitty + complete setup zsh | source /dev/stdin
+alias brightness="wlr-randr --output eDP-1 --brightness"
 
 fortune | cowsay -n | lolcat
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/kabir/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/kabir/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/kabir/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/kabir/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
