@@ -1,1 +1,1 @@
-exec dbus-launch --autolaunch=$(cat /var/lib/dbus/machine-id) bspwm
+dbus-launch --exit-with-session bspwm

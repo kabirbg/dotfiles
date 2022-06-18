@@ -4,19 +4,21 @@
 super + @space
     rofi -modi drun -show drun -show-icons
 alt + @space
-    rofimoji 
+    rofi -modi emoji -show emoji 
 super + Return
 	kitty
 super + shift + return
 	kitty nvim
 super + k
-	skypeforlinux
+	flatpak run com.skype.Client
 super + t
     thunderbird
 super + e
     emacs
 super + b
     blender
+super + s
+flatpak run com.spotify.Client
 alt + Return
     firefox
 alt + shift + Return
