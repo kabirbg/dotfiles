@@ -11,6 +11,8 @@ super + shift + return
 	kitty nvim
 super + k
 	exec /usr/lib/brave-bin/brave --profile-directory=Default --app-id=lljldmnnhjkandejalbjlndemhlcjepa
+super + s
+    spotify
 super + t
     thunderbird
 super + e
