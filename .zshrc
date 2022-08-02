@@ -1,4 +1,4 @@
-export PATH="/home/kabir/bin:/home/kabir/.emacs.d/bin:/home/kabir/.local/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH"
+export PATH="/home/kabir/cargo/.bin:/home/kabir/bin:/home/kabir/.emacs.d/bin:/home/kabir/.local/bin:/usr/local/sbin:/usr/sbin:/sbin:.bin:$PATH"
 
 # XDG_RUNTIME_DIR (for linux)
 export XDG_RUNTIME_DIR=/run/user/1000/
