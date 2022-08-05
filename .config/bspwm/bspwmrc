@@ -5,14 +5,9 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 xscreensaver --no-splash &
 polybar status &
 (bin/backup.sh >& .local/share/backup.log) &
-(onedrive_tray --onedrive-path "/usr/sbin/onedrive" --onedrive-args "-m --enable-logging") &
-spotifyd --no-daemon &
+(onedrive_tray --onedrive-path "/usr/bin/onedrive" --onedrive-args "-m --enable-logging") &
 playerctld daemon
-
-#imac customizatiosn
-if [ "$(hostname)" == "iMac" ]; then
-    xrandr -s 3840x2160
-fi
+(while true; do sudo rc-service NetworkManager restart; sleep 2h; done) &
 
 #x session config
 xrdb ~/.Xresources
