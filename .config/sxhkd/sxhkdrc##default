@@ -4,7 +4,7 @@
 super + @space
     rofi -modi drun -show drun -show-icons
 alt + @space
-    rofimoji 
+    .local/bin/rofimoji 
 super + Return
 	kitty
 super + shift + return

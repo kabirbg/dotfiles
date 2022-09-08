@@ -4,10 +4,10 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 xscreensaver --no-splash &
 polybar status &
-(bin/backup.sh >& .local/share/backup.log) &
-(onedrive_tray --onedrive-path "/usr/bin/onedrive" --onedrive-args "-m --enable-logging") &
+nm-applet &
+(onedrive_tray -p "/usr/bin/onedrive" -a "-m --enable-logging" -s) &
 playerctld daemon
-(while true; do sudo rc-service NetworkManager restart; sleep 2h; done) &
+(.local/bin/backup.sh >& .local/share/backup.log) &
 
 #x session config
 xrdb ~/.Xresources
@@ -26,9 +26,9 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 #app rules
-bspc rule -a Thunderbird desktop='^1'
-bspc rule -a Firefox desktop='^3'
-bspc rule -a Spotify desktop='^4'
+bspc rule -a thunderbird desktop='^1'
+bspc rule -a firefox desktop='^3'
+bspc rule -a spotify desktop='^9'
 bspc rule -a Zathura state=tiled
 bspc rule -a Emacs state=tiled
 
