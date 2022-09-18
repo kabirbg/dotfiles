@@ -1,3 +1,5 @@
+export PATH="/usr/local/opt/openjdk/bin:/usr/local/opt/python@3.10/libexec/bin:$PATH"
+
 # Set neovim as default text editor
 export EDITOR="$(command -v nvim)"
 
