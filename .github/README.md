@@ -10,10 +10,4 @@ The bootstrap script is included to install everything else that I might need (o
 
 ## Screenshots
 
-macOS 11.2 Big Sur: 
-- bar — [Übersicht](http://tracesof.net/uebersicht/), currently using 
-- firefox — aurora theme with [blurredfox](https://github.com/manilarome/blurredfox) css
-- terminal — [kitty](https://sw.kovidgoyal.net/kitty/) with [oh-my-zsh](https://ohmyz.sh) themes and [homebrew](https://brew.sh) running
-- editor — [neovim](https://neovim.io); pdf-viewer [zathura](https://pwmt.org/projects/zathura/) (macOS port is [homebrew-zathura](https://github.com/zegervdv/homebrew-zathura))
-
-![screenshot #1](screenshot-1.png)
+coming soon (bspwm, red background, there really isn't much to see)
