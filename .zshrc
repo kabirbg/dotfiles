@@ -1,3 +1,4 @@
+cd
 export PATH="/Library/TeX/texbin:/Users/kabir/.emacs.d/bin:/Applications/Warp.app/Contents/MacOS:/usr/local/opt/openjdk/bin:/usr/local/opt/python@3.10/libexec/bin:$PATH"
 export XDG_RUNTIME_DIR=/tmp/
 
