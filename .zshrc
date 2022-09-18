@@ -1,4 +1,5 @@
-export PATH="/usr/local/opt/openjdk/bin:/usr/local/opt/python@3.10/libexec/bin:$PATH"
+export PATH="/Library/TeX/texbin:/Users/kabir/.emacs.d/bin:/Applications/Warp.app/Contents/MacOS:/usr/local/opt/openjdk/bin:/usr/local/opt/python@3.10/libexec/bin:$PATH"
+export XDG_RUNTIME_DIR=/tmp/
 
 # Set neovim as default text editor
 export EDITOR="$(command -v nvim)"
@@ -12,7 +13,7 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="mm/dd/yyyy"
-plugins=(git ruby colored-man-pages command-not-found forklift lol emotty themes emoji-clock rand-quote zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git ruby colored-man-pages command-not-found macos forklift lol emotty themes emoji-clock rand-quote zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # aliases
