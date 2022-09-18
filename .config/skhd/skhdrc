@@ -32,10 +32,10 @@ cmd + shift - escape: pmset sleepnow
 ###########
 
 # swap/warp windows
-ctrl - h : yabai -m window --swap west
-ctrl - j : yabai -m window --swap south
-ctrl - k : yabai -m window --swap north
-ctrl - l : yabai -m window --swap east
+shift + cmd - h : yabai -m window --swap west
+shift + cmd - j : yabai -m window --swap south
+shift + cmd - k : yabai -m window --swap north
+shift + cmd - l : yabai -m window --swap east
 
 # increase window size
 shift + ctrl - h : yabai -m window --resize left:-20:0
