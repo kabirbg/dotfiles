@@ -1,6 +1,6 @@
 # DOTFILES
 
-These are my personal dotfiles for macOS and Linux (current setup is bspwm + Void), using [yadm](https://yadm.io).
+These are my personal dotfiles (macOS branch), using [yadm](https://yadm.io).
 
 ## Installation
 
