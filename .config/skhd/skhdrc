@@ -21,8 +21,8 @@ shift - 0x69: screencapture -cix
 # make skhd reload its configuration files:
 ctrl - escape : skhd --reload
 
-# restart yabai and spacebar:
-ctrl + shift - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.spacebar" "gui/${UID}/homebrew.mxcl.yabai"
+# restart yabai:
+ctrl + shift - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 
 # sleep:
 cmd + shift - escape: pmset sleepnow
@@ -77,9 +77,6 @@ fn+ ctrl - w : yabai -m space --destroy && \
            yabai -m space --focus recent
 
 # fast focus desktop
-ctrl - down : yabai -m space --focus recent
-ctrl - left : yabai -m space --focus prev
-ctrl - right : yabai -m space --focus next
 ctrl - 1 : yabai -m space --focus 1
 ctrl - 2 : yabai -m space --focus 2
 ctrl - 3 : yabai -m space --focus 3
